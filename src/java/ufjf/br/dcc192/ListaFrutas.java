@@ -30,7 +30,7 @@ public class ListaFrutas extends HttpServlet {
         frutas = new ArrayList<String>();
         frutas.add("Marça");
         frutas.add("Banana");
-        frutas.add("Perã");
+        frutas.add("Pera");
         frutas.add("Jabuticaba");
         frutas.add("Carambola");
         frutas.add("Goiaba");
@@ -39,9 +39,6 @@ public class ListaFrutas extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String comando = req.getParameter("comando");
-        if ("aleatoria".equals(comando)) {
-            Collections.sort(frutas);
-        }
         resp.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = resp.getWriter()) {
             out.println("<!DOCTYPE html>");
