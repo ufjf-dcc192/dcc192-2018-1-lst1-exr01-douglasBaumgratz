@@ -75,8 +75,4 @@ public class ListaFrutas extends HttpServlet {
         }
     }
 
-    public int comparacao(String a1, String a2) {
-        return a1.length() - a2.length();
-    }
-
 }
